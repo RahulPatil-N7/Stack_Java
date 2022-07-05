@@ -12,8 +12,10 @@ public class StackMain {
 	private static int userMenu() {
 		System.out.println("\nPlease enter your choice.");
 		System.out.println("Press 1 to Insert");
-		System.out.println("Press 2 to Peek");
-		System.out.println("Press 3 to Exit.");
+		System.out.println("Press 2 to Delete");
+		System.out.println("Press 3 to Peek");
+		System.out.println("Press 4 to Dispay");
+		System.out.println("Press 5 to Exit.");
 		int choice = scanner.nextInt();
 		return choice;
 	}
@@ -30,10 +32,15 @@ public class StackMain {
 						stack.push(element);
 						System.out.println("\nElement "+element+" is pushed into stack.");
 						break;
-				case 2: System.out.println("\nElements of Stack are :");
+				case 2: System.out.println("Element is deleted from stack.");
+						stack.pop();
+						break;
+				case 3: stack.peek();
+						break;
+				case 4: System.out.println("\nElements of Stack are :");
 						stack.display();
 						break;
-				case 3: System.out.println("\nExiting from Stack,Thanks");
+				case 5: System.out.println("\nExiting from Stack,Thanks");
 						flag = false;
 						break;
 				default:System.out.println("\nInvaid choice.");
