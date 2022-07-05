@@ -21,6 +21,17 @@ public class StackImplementation {
 		}
 	}
 	
+	//method to delete elements from stack.
+	void pop() {
+		if(top==null)
+		System.out.println("Stack is empty");
+		else {
+			Node temp = top;
+			System.out.println("The Deteted element :"+ temp.data);
+			top = top.next;
+		}
+	}
+	
 	//method to display elements of stack
 	void display() {
 		if(top==null)
@@ -33,6 +44,17 @@ public class StackImplementation {
 			}
 			System.out.println(temp.data);
 		}
+	}
+	
+	//method to peek into top of stack
+	public int peek() {
+		if(top == null) {
+			System.out.println("Stack is empty.");
+		}
+		else {
+			System.out.println("Top of stack :" +top.data);
+		}
+		return top.data;
 	}
 	
 }
